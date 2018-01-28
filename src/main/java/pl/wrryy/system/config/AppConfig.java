@@ -14,12 +14,10 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import pl.wrryy.system.PriorityConverter;
-import pl.wrryy.system.ProjectConverter;
-import pl.wrryy.system.StatusConverter;
-import pl.wrryy.system.UserConverter;
+import pl.wrryy.system.beans.*;
 
 import javax.persistence.EntityManagerFactory;
+import javax.servlet.Filter;
 import javax.validation.Validator;
 
 @Configuration
@@ -81,5 +79,11 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public PriorityConverter getPriorityConverter() {
         return new PriorityConverter();
+    }
+
+    @Bean
+    public Filter loginFilter() {
+        LoginFilter loginFilter = new LoginFilter();
+        return loginFilter;
     }
 }

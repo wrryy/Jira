@@ -111,4 +111,22 @@ public class AddController {
             return "redirect:/panel/user";
         }
     }
+    @PostMapping("/status")
+    public String addStatus(@Valid Status status, BindingResult result) {
+        if (result.hasErrors()) {
+            return "panel/status";
+        } else {
+            statusRepository.save(status);
+            return "redirect:/panel/status";
+        }
+    }
+    @PostMapping("/priority")
+    public String addPriority(@Valid Priority priority, BindingResult result) {
+        if (result.hasErrors()) {
+            return "panel/priority";
+        } else {
+            priorityRepository.save(priority);
+            return "redirect:/panel/priority";
+        }
+    }
 }

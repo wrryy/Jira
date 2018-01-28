@@ -40,6 +40,10 @@ public class PanelController {
     public List<Priority> getPrios(Model model) {
        return priorityRepository.findAll();
     }
+    @ModelAttribute("stats")
+    public List<Status> getStatus(Model model) {
+       return statusRepository.findAll();
+    }
 
     @GetMapping("/project")
     public String showProjects(Model model) {
@@ -51,7 +55,6 @@ public class PanelController {
     public String showTasks(Model model) {
         model.addAttribute("task", new Task());
         model.addAttribute("tasks", taskRepository.findAllByOrderByCreatedDesc());
-        model.addAttribute("stats", statusRepository.findAll());
         return "panel/task";
     }
     @GetMapping("/user")

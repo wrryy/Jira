@@ -12,7 +12,7 @@
     <a href="/panel/project"><strong>Projects</strong></a>
     <a href="/panel/task">Tasks</a>
     <a href="/panel/user">Users</a>
-    <a href="/panel/user">Status</a>
+    <a href="/panel/status">Status</a>
     <a href="/panel/priority">Priority</a>
 
     <%@ include file="../menu.jsp" %>

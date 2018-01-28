@@ -1,4 +1,4 @@
-package pl.wrryy.system;
+package pl.wrryy.system.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;

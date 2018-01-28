@@ -81,4 +81,4 @@
         <a class="afloatright" href="/logout">Logout</a>
         <a class="afloatright" href="/panel/project">Hello ${user}</a>
     </c:if>
-<br>
+<br style="margin-bottom: 10px;">
